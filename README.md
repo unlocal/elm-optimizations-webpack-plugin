@@ -107,3 +107,20 @@ Add the `ElmOptimizationsPlugin` as the first entry in order to use the plugin:
 **NOTE:** It's very important that `ElmOptimizationsPlugin` plugin is listed _before_ `elm-webpack-loader`, because
 Webpack runs loaders in reverse order of how they are listed. `ElmOptimizationsPlugin` only works with the output of the
 Elm compilation, not with Elm sourcecode itself.
+
+Example
+-------
+
+You can run a build of the example app in this repo with:
+
+```
+npm run build-dev
+```
+
+And you can have webpack serve the example app in this repo with:
+
+```
+npm run serve-dev
+```
+
+The webpack configuration options are located in the `elmSupport` function of `webpack.config.js`.
