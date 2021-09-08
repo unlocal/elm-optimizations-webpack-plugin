@@ -1,6 +1,9 @@
 {
   "license": "UNLICENSED",
-  "scripts": {},
+  "scripts": {
+    "serve-dev": "webpack serve --env audience=dev --env platform=web",
+    "build-dev": "webpack build --env audience=dev --env platform=web"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@dillonkearns/elm-graphql": "^4.2.2",

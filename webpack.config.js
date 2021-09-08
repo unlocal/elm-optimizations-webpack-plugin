@@ -134,7 +134,7 @@ function elmSupport({audience, platform, isDev, isProd, isWeb, isHybrid, ifDev, 
   return {
     resolve: {
       alias: {
-        MainModule: resolve('src/scripts/MainModule.elm')
+        MainModule: resolve('src/scripts/Main.elm')
       }
     },
     module: {
