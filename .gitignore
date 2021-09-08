@@ -2,3 +2,4 @@ node_modules
 elm-stuff
 builds
 .idea/
+ElmOptimizationsPlugin.debug.js

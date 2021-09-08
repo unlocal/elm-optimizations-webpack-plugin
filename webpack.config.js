@@ -1,4 +1,5 @@
 const {resolve} = require('path'); //provides absolute paths
+const path = require('path'); //provides absolute paths
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {removeEmpty} = require('webpack-config-utils');
 const {LoaderOptionsPlugin, DefinePlugin, optimize: {LimitChunkCountPlugin}, debug} = require('webpack');
@@ -142,6 +143,13 @@ function elmSupport({audience, platform, isDev, isProd, isWeb, isHybrid, ifDev, 
         loader({
           test: /\.elm$/,
           use: removeEmpty([
+            {
+              loader: path.join(__dirname, './ElmOptimizationsPlugin'),
+              /** @type ElmOptimizationsPluginOptions */
+              options: {
+                htmlLazy: true,
+              }
+            },
             ifOptimized({loader: 'elm-assets-loader', options: {module: 'Assets', tagger: 'AssetPath'}}),
             ({ loader: 'elm-asset-webpack-loader' }),
             ifActiveDevelopment({ loader: 'elm-hot-webpack-loader' }),
