@@ -6,7 +6,7 @@
   "scripts": {
     "serve-dev": "webpack serve --env audience=dev --env platform=web",
     "build-dev": "webpack build --env audience=dev --env platform=web",
-    "publish": "./node_modules/.bin/tsc && npm publish --access public"
+    "publish-package": "./node_modules/.bin/tsc && npm publish --access public"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

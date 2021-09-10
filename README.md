@@ -134,4 +134,4 @@ To publish:
 
 1. First, bump the version number.
 2. Ensure TypeScript compiles successfully.
-3. Run `npm run publish`
+3. Run `npm run publish-package`
