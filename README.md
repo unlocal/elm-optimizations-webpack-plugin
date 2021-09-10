@@ -87,7 +87,7 @@ Add the `ElmOptimizationsPlugin` as the first entry in order to use the plugin:
                 test: /\.elm$/,
                 use: [
                     {
-                        loader: require('path').join(__dirname, './ElmOptimizationsPlugin'),
+                        loader: "@unlocal/elm-optimizations-webpack-plugin",
                         /** @type ElmOptimizationsPluginOptions */
                         options: {
                             htmlLazy: true,
@@ -124,3 +124,14 @@ npm run serve-dev
 ```
 
 The webpack configuration options are located in the `elmSupport` function of `webpack.config.js`.
+
+Publishing
+----------
+
+You can verify that npm will receive the right files by first running the `npm pack` command.
+
+To publish:
+
+1. First, bump the version number.
+2. Ensure TypeScript compiles successfully.
+3. Run `npm run publish`

@@ -1,0 +1,15 @@
+.idea
+builds
+elm-stuff
+node_modules
+src
+.gitignore
+config.js
+elm.json
+*.debug.js
+*.ts
+!*.d.ts
+icon.png
+webpack.config.js
+tsconfig.json
+*.tgz
